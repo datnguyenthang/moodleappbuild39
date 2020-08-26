@@ -50,7 +50,9 @@
     <feature name="StatusBar">
         <param name="ios-package" onload="true" value="CDVStatusBar" />
     </feature>
-
+	
+	<gap:platform name="ios" />
+    <gap:platform name="android" />
 	<icon src="icon.png" />
     <gap:splash src="splash.png" />
 	
