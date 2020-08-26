@@ -1,0 +1,88 @@
+addon-mod-url-index {
+    ion-list {
+        margin-bottom: 5px !important;
+        ionic3-star-rating {
+            padding-right: 5px !important;
+            ion-icon {
+                font-size: 2.5rem !important;
+            }
+        }
+    }
+}
+core-ats-rating {
+    .row {
+        background-color: $white;
+        ion-label {
+            margin-left: 8px !important;
+            line-height: 3rem;
+        }
+        ionic3-star-rating {
+            padding-right: 5px;
+            ion-icon {
+                font-size: 2.5rem !important;
+            }
+        }
+    }
+    .detail-rating {
+        height: 0px;
+        transition: 0.5s;
+        width: 100%;
+        overflow: hidden;
+        .average-rating {
+            text-align: center;
+            line-height: unset !important;
+            width: 50%;
+            .point  {
+                font-size: 3rem;
+                color: #008446;
+            }
+        }
+        .detail {
+            text-align: right;
+            width: 50%;
+            padding-right: 10px;
+            .item {
+                width: 100%;
+                display: inline-block;
+                line-height: 0.6rem;
+                .ionic3-star-rating {
+                    button {
+                        width: 10px !important;
+                        height: 10px !important;
+                        min-width: 0px !important;
+                        min-height: 0px !important;
+                        margin: 0px !important;
+                        padding: 0px 7px !important;
+                        .icon {
+                            font-size: 1.5rem !important;
+                        }
+                    }
+                }
+            }
+            .item>div:first-child {
+                float: right;
+                line-height: 1.3rem;
+                margin-left: 5px;
+            }
+            .item>div:nth-child(2) {
+                float: right;
+            }
+        }
+    }
+    .show-detail {
+        height: 110px;
+    }
+
+    .button-show-detail {
+        text-align: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: #3f704d;
+        ion-icon {
+            width: 100% !important;
+            border-top: 1px solid;
+            border-image: linear-gradient(to right, #00000000, #c8c7cc, #00000000 ) 100% 1;
+        }
+    }
+    
+}

@@ -1,0 +1,75 @@
+<core-loading [hideUntil]="commentLoaded">
+    <ng-container *ngIf="isEnableComment; then blockComment"></ng-container>
+    <ng-template #blockComment>
+        <ion-list class="block-comment">
+            <ion-list-header lines="inset">
+              <ion-label>{{ 'components.ats-comment.title' | translate }}</ion-label>
+            </ion-list-header>
+            <div class="item item-block item-ios input-comment {{ replyClass }}  {{txtCommentClass}}">
+                <div *ngIf="postReplied.postid > 0; then blockPostReplied"></div>
+                <ng-template #blockPostReplied>
+                    <ion-icon name="close" class="close-icon" (click)="closeReplyClick()"></ion-icon>
+                    <ion-label>
+                        <h2 class="title">
+                            <ion-icon ios="ios-contact" md="md-contact"></ion-icon>
+                            <b>{{ postReplied.firstname }} {{ postReplied.lastname}}</b>
+                        </h2>
+                        <h3 class="content">{{ postReplied.content }}</h3>
+                        <ion-note>
+                            <p class="detail">{{ postReplied.timecreated }}</p>
+                        </ion-note>
+                        <div class="block-reply">
+                            <div *ngFor="let postReply of postReplied.replies">
+                                <ion-label>
+                                    <h3 class="title">
+                                        <ion-icon ios="ios-contact" md="md-contact"></ion-icon>
+                                        <b>{{ postReply.firstname }} {{ postReply.lastname}}</b>
+                                    </h3>
+                                    <h3 class="content">{{ postReply.content }}</h3>
+                                    <ion-note>
+                                        <p class="detail">{{ postReply.timecreated }}</p>
+                                    </ion-note>
+                                </ion-label>
+                            </div>
+                        </div>
+                    </ion-label>
+                </ng-template>
+                <div class="item item-block">
+                    <ion-textarea id="txtComment" #txtComment class="txt-comment" value="{{ commentText }}"
+                            rows="1" cols="2" auto-grow="true" placeholder="{{ 'components.ats-comment.text.writecomment' | translate }}"
+                            (ionFocus)="txtCommentFocus()" (ionBlur)="txtCommentBlur()"></ion-textarea>
+                    <a class="button-send" (click)="sendCommentClick()"><ion-icon ios="ios-send" md="md-send"></ion-icon></a>
+                </div>
+            </div>
+            <ion-item *ngFor="let post of listPost">
+                <ion-label>
+                    <h2 class="title">
+                        <ion-icon ios="ios-contact" md="md-contact"></ion-icon>
+                        <b>{{ post.firstname }} {{ post.lastname}}</b>
+                    </h2>
+                    <h3 class="content">{{ post.content }}</h3>
+                    <ion-note>
+                        <p class="detail">{{ post.timecreated }}</p>
+                        <a class="link-action" (click)="replyClick(post)">
+                            {{ 'components.ats-comment.label.reply' | translate }}
+                        </a>
+                    </ion-note>
+                    <div class="block-reply">
+                        <div *ngFor="let postReply of post.replies">
+                            <ion-label>
+                                <h3 class="title">
+                                    <ion-icon ios="ios-contact" md="md-contact"></ion-icon>
+                                    <b>{{ postReply.firstname }} {{ postReply.lastname}}</b>
+                                </h3>
+                                <h3 class="content">{{ postReply.content }}</h3>
+                                <ion-note>
+                                    <p class="detail">{{ postReply.timecreated }}</p>
+                                </ion-note>
+                            </ion-label>
+                        </div>
+                    </div>
+                </ion-label>
+            </ion-item>
+        </ion-list>
+    </ng-template>
+</core-loading>

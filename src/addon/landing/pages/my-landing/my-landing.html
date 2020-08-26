@@ -1,0 +1,86 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title><core-format-text [text]="siteName"></core-format-text></ion-title>
+
+        <ion-buttons end>
+            <button ion-button icon-only (click)="openSearch()" [attr.aria-p]="'core.courses.searchcourses' | translate">
+                <ion-icon name="search"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content class="ats-content">
+    <ion-refresher [enabled]="landingLoaded" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingText="{{ 'core.pulltorefresh' | translate }}"></ion-refresher-content>
+    </ion-refresher>
+    <core-loading [hideUntil]="landingLoaded">
+        <div ion-fixed>
+            <ion-grid class="box">
+                <ion-row>
+                    <ion-col id="s-o-s" col-6 col-sm (click)="openCataloguePage('AddonSchoolOfSalesMySchoolOfSalesPage')">
+                        <div class="item">
+                            <img src="assets/img/landing/sales.svg">
+                        </div>
+                        <p>{{ 'addon.landing.schoolofsale' | translate }}</p>
+                    </ion-col>
+                    <ion-col id="s-o-r" col-6 col-sm (click)="openCataloguePage('AddonSchoolOfRecoveryMySchoolOfRecoveryPage')">
+                        <div class="item">
+                            <img src="assets/img/landing/recovery.svg">
+                        </div>
+                        <p>{{ 'addon.landing.schoolofrecovery' | translate }}</p>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col id="f-a" col-6 col-sm (click)="openCataloguePage('AddonFeAcademyMyFeAcademyPage')">
+                        <div class="item">
+                            <img src="assets/img/landing/fe-academy.svg">
+                        </div>
+                        <p>{{ 'addon.landing.feacademy' | translate }}</p>
+                    </ion-col>
+                    <ion-col id="m-c" col-6 col-sm (click)="openCataloguePage('AddonMandatoryMyMandatoryPage')">
+                        <div class="item">
+                            <img src="assets/img/landing/mandatory.svg">
+                        </div>
+                        <p>{{ 'addon.landing.mandatorycourse' | translate }}</p>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+
+            <div class="block_slider">
+                <div>
+                    <ion-label>
+                        {{ 'addon.landing.titleslider' | translate }}
+                    </ion-label>
+                </div>
+                <ion-slides *ngIf="slideDatas && slideDatas.length" autoplay="3000" loop="true" pager="true">
+                    <ion-slide *ngFor="let slide of slideDatas">
+                        <a (click)="openLink(slide.moduleid, slide.courseid, slide.modname)">
+                            <img class="lazy-loaded" [src]="slide.imageurl" >
+                        </a>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+
+            <div class="block_tools">
+                <div>
+                    <ion-label>
+                        {{ 'addon.landing.titletools' | translate }}
+                    </ion-label>
+                </div>
+                <ion-grid class="tools">
+                    <ion-row>
+                        <ion-col col-3 col-sm *ngFor="let handler of handlers" (click)="openHandler(handler)" title="{{ handler.title | translate }}">
+                            <div class="tool-element">
+                                <div class="tool-img">
+                                    <core-icon *ngIf="!handler.icon.includes('http')" [name]="handler.icon"></core-icon>
+                                    <img *ngIf="handler.icon.includes('http')" [src]="handler.icon" />
+                                </div>
+                                <p>{{ handler.title | translate}}</p>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </div>
+        </div>
+    </core-loading>
+</ion-content>

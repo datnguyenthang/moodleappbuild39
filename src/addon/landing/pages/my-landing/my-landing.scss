@@ -1,0 +1,222 @@
+page-addon-landing-my-landing {
+    @keyframes scalein {
+        from {transform: scale(1,1);}
+        to {transform: scale(1.2,1.2);}
+    }
+    .ats-content {
+        background-color: #ffffff;
+        .box {
+            padding-top: 20px;
+            max-width: 40rem;
+            margin-left: auto;
+            margin-right: auto;
+            .row {
+                .col {
+                    text-align: center;
+                    .item {
+                        width: 11rem;
+                        height: 11rem;
+                        border-radius: 50%;
+                        box-shadow: 1px 1px #5d5252;
+                        margin: auto;
+                        padding: 2rem;
+                        text-align: center;
+                        vertical-align: middle;
+                        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 3px 5px 6px rgba(0,0,0,0.23);
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                    p {
+                        font-size: medium;
+                        margin: 15px 0px 10px 0px;
+                    }
+                }
+                
+                #s-o-s {
+                    animation-name: scalein;
+                    animation-duration: 0.5s;
+                    animation-iteration-count: 2;
+                    animation-delay: 2s;
+                    animation-direction: alternate;
+                    
+                    .item {
+                        background: #5cacc5;
+                    }
+                }
+                #s-o-r {
+                    animation-name: scalein;
+                    animation-duration: 0.5s;
+                    animation-iteration-count: 2;
+                    animation-delay: 3s;
+                    animation-direction: alternate;
+                    .item {
+                        background: #dd8757;
+                    }
+                }
+                #f-a {
+                    animation-name: scalein;
+                    animation-duration: 0.5s;
+                    animation-iteration-count: 2;
+                    animation-delay: 4s;
+                    animation-direction: alternate;
+                    .item {
+                        background: #e47381;
+                    }
+                }
+                #m-c {
+                    animation-name: scalein;
+                    animation-duration: 0.5s;
+                    animation-iteration-count: 2;
+                    animation-delay: 5s;
+                    animation-direction: alternate;
+                    .item {
+                        background: #49c88e;
+                    }
+                }
+            }
+        }
+        
+        .block_slider {
+            width: 100vw;
+            padding: 0;
+            background-color: #dedede5e;
+            ion-slides {
+                .slide-zoom {
+                    padding: 0px 2px;
+                    img {
+                        border-radius: 5px;
+                        margin-top: 15px;
+                    }
+                }
+                .swiper-pagination-bullets {
+                    top: -3px;
+                    justify-content: right;
+                    text-align: right;
+                    line-height: 18px;
+                }
+            }
+            ion-label {
+                margin: 0px;
+                position: relative;
+                top: 10px;
+                left: 5px;
+                font-size: larger;
+                font-weight: 500;
+                padding-left: 5px;
+            }
+        }
+        
+        .block_tools {
+            display: block;
+            margin: 10px;
+            ion-label {
+                margin: 0px;
+                font-size: larger;
+                font-weight: 500;
+            }
+            .tools {
+                .tool-element {
+                    margin: 10px;
+                    text-align: center;
+                    justify-content: center;
+                    .tool-img {
+                        font-size: 30px;
+                        text-align: center;
+                        width: 50px;
+                        height: 50px;
+                        background-color: white;
+                        margin: auto;
+                        line-height: 55px;
+                        color: #008445;
+                        box-shadow: 1px 1px 5px #00000030;
+                        border-radius: 5px;
+                        border: 1px solid #00000014;
+                    }
+                    p {
+                        margin: 10px 0px;
+                        color: #3a3a3a;
+                    }
+                }
+                .tool-element:first-child {
+                    margin-left: 0px;
+                }
+                .tool-element:last-child {
+                    margin-right: 0px;
+                }
+        
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+        @media (min-width: 768px) and (min-height: 1024px) {
+            .box {
+                max-width: 60rem;
+                .row {
+                    .col {
+                        .item {
+                            width: 20rem;
+                            height: 20rem;
+                            padding: 4rem;
+                        }
+                        p {
+                            font-size: large;
+                        }
+                    }
+                }
+            }
+        }
+        @media (min-width: 1024px) and (min-height: 768px) {
+            .box {
+                max-width: 60rem;
+                .row {
+                    .col {
+                        .item {
+                            width: 20rem;
+                            height: 20rem;
+                            padding: 4rem;
+                        }
+                        p {
+                            font-size: large;
+                        }
+                    }
+                }
+            }
+        }
+        @media (min-width: 1200px) and (min-height: 2100px) {
+            .box {
+                max-width: 120rem;
+                padding-top: 10rem;
+                padding-bottom: 7rem;
+                .row {
+                    .col {
+                        .item {
+                            width: 35rem;
+                            height: 35rem;
+                            padding: 7rem;
+                        }
+                        p {
+                            padding: 2rem 0rem;
+                        }
+                    }
+                }
+            }
+
+            .block_tools {
+                .tools {
+                    .tool-element {
+                        .tool-img {
+                            font-size: 6rem;
+                            width: 10rem;
+                            height: 10rem;
+                            line-height: 10rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
