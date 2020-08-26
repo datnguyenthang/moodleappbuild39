@@ -1,0 +1,63 @@
+{
+    "app_id": "vn.com.fecredit.training",
+    "appname": "FE Training",
+    "desktopappname": "FE Training",
+    "versioncode": 3920,
+    "versionname": "3.9.2",
+    "cache_update_frequency_usually": 420000,
+    "cache_update_frequency_often": 1200000,
+    "cache_update_frequency_sometimes": 3600000,
+    "cache_update_frequency_rarely": 43200000,
+    "default_lang": "vi",
+    "languages": {
+        "en": "English",
+        "vi": "Tiếng Việt"
+    },
+    "wsservice": "moodle_mobile_app",
+    "wsextservice": "local_mobile",
+    "demo_sites": {
+        "student": {
+            "url": "https:\/\/school.moodledemo.net",
+            "username": "student",
+            "password": "moodle"
+        },
+        "teacher": {
+            "url": "https:\/\/school.moodledemo.net",
+            "username": "teacher",
+            "password": "moodle"
+        }
+    },
+    "font_sizes": [
+        62.5,
+        75.89,
+        93.75
+    ],
+    "customurlscheme": "atsmobile",
+    "siteurl": "training.fecredit.com.vn",
+    "sitename": "FE ATS",
+    "multisitesdisplay": "",
+    "onlyallowlistedsites": false,
+    "skipssoconfirmation": false,
+    "forcedefaultlanguage": false,
+    "privacypolicy": "https:\/\/moodle.net\/moodle-app-privacy\/",
+    "notificoncolor": "#008446",
+    "statusbarbg": false,
+    "statusbarlighttext": false,
+    "statusbarbgios": "#000000",
+    "statusbarlighttextios": true,
+    "statusbarbgandroid": "#000000",
+    "statusbarlighttextandroid": true,
+    "statusbarbgremotetheme": "#000000",
+    "statusbarlighttextremotetheme": true,
+    "enableanalytics": false,
+    "enableonboarding": true,
+    "forceColorScheme": "",
+    "ioswebviewscheme": "moodleappfs",
+    "appstores": {
+        "android": "vn.com.fecredit.training",
+        "ios": "1322318729",
+        "windows": "moodle-desktop\/9p9bwvhdc8c8",
+        "mac": "1255924440",
+        "linux": "https:\/\/download.moodle.org\/desktop\/download.php?platform=linux&arch=64"
+    }
+}
