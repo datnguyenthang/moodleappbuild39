@@ -593,6 +593,8 @@
     "components.ats-comment.label.reply": "Trả lời",
     "components.ats-comment.text.writecomment": "Viết bình luận...",
     "components.ats-comment.title": "Bình luận",
+    "components.ats-rating.commentmessage": "Bình luận của bạn (ít nhất 20 ký tự)",
+    "components.ats-rating.commenttitle": "Bình luận",
     "components.ats-rating.label.rating": "lượt đánh giá",
     "components.ats-rating.label.submitsuccess": "Đánh giá thành công",
     "components.ats-rating.title": "Đánh giá của bạn",
@@ -1174,5 +1176,6 @@
     "core.years": "năm",
     "core.yes": "Có",
     "core.youreoffline": "Bạn đang offline",
-    "core.youreonline": "Bạn đang trở lại trực tuyến"
+    "core.youreonline": "Bạn đang trở lại trực tuyến",
+    "sitename": "FE TRAINING"
 }
