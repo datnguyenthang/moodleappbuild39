@@ -3,9 +3,9 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "vn.com.fecredit.training"
-        versionCode = "39200"
-        android-versionCode="39200"
-        version   = "3.9.2">
+        versionCode = "39201"
+        android-versionCode="39201"
+        version   = "3.9.2.1">
     <name>FE CREDIT - TRAINING</name>
 
     <description>
@@ -17,7 +17,7 @@
     </author>
 
     <edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="merge">
-        <string>3.9.2</string>
+        <string>3.9.2.1</string>
     </edit-config>
 
     <gap:platform name="ios" />
